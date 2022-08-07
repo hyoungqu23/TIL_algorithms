@@ -34,11 +34,10 @@ bubbleSort([8, 1, 2, 3, 4, 5, 6, 7]);
 const bubbleSort = (array) => {
   for (let i = array.length - 1; i >= 0; i--) {
     for (let j = 0; j < i; j++) {
-      console.log(i, j);
+      console.log(array, array[j], array[j + 1]);
       if (array[j] > array[j + 1]) {
         [array[j], array[j + 1]] = [array[j + 1], array[j]];
       }
-      console.log(array);
     }
   }
   return array;
