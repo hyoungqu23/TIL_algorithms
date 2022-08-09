@@ -41,19 +41,15 @@ const mergeArray = (array1, array2) => {
   }
 
   // 첫 번째 배열이 먼저 끝난 경우 두 번째 배열 나머지를 일괄적으로 추가
-  if (i >= array1.length) {
-    while (j < array2.length) {
-      resultArray.push(array2[j]);
-      j++;
-    }
+  while (j < array2.length) {
+    resultArray.push(array2[j]);
+    j++;
   }
 
   // 두 번째 배열이 먼저 끝난 경우 첫 번째 배열 나머지를 일괄적으로 추가
-  if (j >= array1.length) {
-    while (i < array1.length) {
-      resultArray.push(array2[i]);
-      i++;
-    }
+  while (i < array1.length) {
+    resultArray.push(array1[i]);
+    i++;
   }
 
   return resultArray;
